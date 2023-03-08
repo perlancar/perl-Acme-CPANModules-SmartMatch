@@ -1,0 +1,5 @@
+Acme-CPANModules-SmartMatch-*
+.build
+*~
+nytprof*
+.DS_Store

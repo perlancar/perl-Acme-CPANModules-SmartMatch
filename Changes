@@ -1,0 +1,52 @@
+0.007   2022-03-18  Released-By: PERLANCAR; Urgency: low
+
+        - No functional changes.
+
+        - Tweak Abstract (add 'List of ...') to follow convention.
+
+
+0.006   2021-10-07  Released-By: PERLANCAR; Urgency: low
+
+	- Update mentioned module Role{,Bundle}::TinyCommons::Tree.
+
+
+0.005   2021-05-06  Released-By: PERLANCAR; Urgency: medium
+
+	- Mention Tree::From::ObjArray, Text::Tree::Indented.
+
+        - Mention Role::TinyCommons::Tree::{Node,NodeMethods} instead of
+	  Role::TinyCommons::Tree (this is just main module name of a distro
+	  instead of actual role).
+
+
+0.004   2020-03-01  Released-By: PERLANCAR; Urgency: high
+
+	- Merge two releases 0.003 and 0.003.1.
+
+
+0.003.1  2020-03-01  Released-By: PERLANCAR; Urgency: low; Broken: yes
+
+	- No functional changes.
+
+	- Use Acme::CPANModulesUtil::Misc.
+
+        - UPDATE: cancel release. Rename version from 0.002 -> 0.003.1
+          (duplicate).
+
+
+0.003   2020-02-05  Released-By: PERLANCAR; Urgency: medium
+
+	- Add Tree::Shell.
+
+	- Add modules related to Role::TinyCommons::Tree.
+
+
+0.002   2020-02-04  Released-By: PERLANCAR; Urgency: medium
+
+	- Update module names.
+
+
+0.001   2019-01-09  Released-By: PERLANCAR
+
+        - First release, split from Acme-CPANModulesBundle-PERLANCAR and remove
+          the PERLANCAR:: in the name.
