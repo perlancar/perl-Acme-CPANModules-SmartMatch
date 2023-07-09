@@ -41,22 +41,30 @@ In the end almost everyone agrees that smart matching is a bad fit for a weakly
 typed language like Perl. The programmer needs to be explicit on what type of
 operation should be done by specifying the appropriate /operator/ (e.g. `==` vs
 `eq`) instead of the operator deducing what operation needs to be done depending
-on the operand, because in Perl the operand's type is unclear. Mainaly, a scalar
-can be a string, or a number, or both.
+on the operand, because in Perl the operand's type is unclear. Mainly, a scalar
+can be a string, or a number, or a bool, or all.
+
+
+**The roadmap to removal**
 
 In perl 5.18 (2013), 6 years after being introduced and used by programmers
 without warning, smart match was declared as experimental, which is weird if you
 think about it. You now have to add `use experimental "smartmatch"' to silence
-the warning. Future perls after 5.36 will most probably deprecate and later
-remove this feature. What happens to the `switch` statement then? Since it's
-tied to smart matching, it also gets the same fate: became experimental since
-5.18 and will probably be removed in future perls.
+the warning. What happens to the `switch` statement then? Since it's tied to
+smart matching, it also gets the same fate: became experimental in 5.18.
 
-However, if you still miss smart matching, some modules have been written to
-give you somewhat similar feature.
+In perl 5.38 (2023) smart match is deprecated. You can no longer silence the
+warning with "use experimental 'smartmatch'" and must replace the use of smart
+match with something else.
+
+Perl 5.40 (planned 2024) will remove smart match, resulting in a syntax error if
+you still use it.
 
 
 **Modules**
+
+However, if you still miss smart matching, some modules have been written to
+give you somewhat similar feature.
 
 <pm:match::smart> (as `|M|` operator or as function `match`) gives you a
 similar behaviour to perl's own `~~`.
