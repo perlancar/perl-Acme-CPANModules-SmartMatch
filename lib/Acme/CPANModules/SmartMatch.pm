@@ -20,7 +20,7 @@ statement. Smart matching was indeed introduced along the new `switch` in perl
 
 What can smart match do? A whole lot. It can do string equality like `eq` if
 given a string on the left hand side and a string on the right hand side. Or it
-can do numeri equality like `==` when both sides are numbers. It can do regex
+can do numeric equality like `==` when both sides are numbers. It can do regex
 matching like `=~` if the left hand side is a scalar and the right hand side is
 a regexp.
 
@@ -49,7 +49,7 @@ can be a string, or a number, or a bool, or all.
 
 In perl 5.18 (2013), 6 years after being introduced and used by programmers
 without warning, smart match was declared as experimental, which is weird if you
-think about it. You now have to add `use experimental "smartmatch"' to silence
+think about it. You now have to add `use experimental "smartmatch"` to silence
 the warning. What happens to the `switch` statement then? Since it's tied to
 smart matching, it also gets the same fate: became experimental in 5.18.
 
