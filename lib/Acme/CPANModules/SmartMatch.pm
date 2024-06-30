@@ -105,6 +105,6 @@ Acme::CPANModulesUtil::Misc::populate_entries_from_module_links_in_description;
 1;
 # ABSTRACT:
 
-=head1 SEE ALSO
+=head1 prepend:SEE ALSO
 
 L<Bencher::ScenarioBundle::SmartMatch>
