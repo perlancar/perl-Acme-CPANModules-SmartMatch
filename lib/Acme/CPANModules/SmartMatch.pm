@@ -25,12 +25,13 @@ matching like `=~` if the left hand side is a scalar and the right hand side is
 a regexp.
 
 But wait, there's (much) more. Interesting things begin when the left/right hand
-side is an array/hash/code/object. `$str ~~ @ary`, probably the most common
-use-case for smart matching, can do value-in-array checking, equivalent to `grep
-{ $str eq $_ } @ary` but with short-circuiting capability. Then there's `$re ~~
-@ary` which can perform regex matching over the elements of array. Now what
-about when the right hand side is an arrayref or hashref? Or the left hand side?
-What if the array is an array of regexes? Or a mix of other types?
+side is an array/hash/code/object. `$str ~~ @ary_of_strs`, probably the most
+common use-case for smart matching, can do value-in-array checking, equivalent
+to `grep { $str eq $_ } @ary_of_strs` but with short-circuiting capability. Then
+there's `$re ~~ @ary_of_strs` which can perform regex matching over the elements
+of array. Now what about when the right hand side is an arrayref or hashref? Or
+the left hand side? What if the array is an array of regexes instead? Or a mix
+of other types?
 
 You need a full-page table as a reference of what will happen in smart matching,
 depending on the combination of operands. Things got complex real fast.
@@ -94,11 +95,11 @@ on a mix of left and right operands.
 **Personal take**
 
 I personally haven't used `switch` all that much in Perl, though I used to use
-quite a bit of smartmatching in the 2010s, mostly the `SCALAR ~~
-ARRAY-OF-SCALARS` variant. I won't use `match::smart` or `Switch::Back` in any
-practical code, but which between `match::simple` and `Switch::Right` are the
-best compromise? I guess we'll have to see. In the mean time, see my benchmark
-in <pm:Bencher::ScenarioBundle::SmartMatch>.
+quite a bit of smartmatching in the 2010s, mostly the `$str ~~ @ary_of_strs`
+variant. I won't use `match::smart` or `Switch::Back` in any practical code any
+time soon (or ever), but which between `match::simple` and `Switch::Right` are
+the best compromise? I guess we'll have to see. In the mean time, see my
+benchmark in <pm:Bencher::ScenarioBundle::SmartMatch>.
 
 
 **Other modules**
