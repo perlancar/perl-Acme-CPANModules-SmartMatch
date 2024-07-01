@@ -58,8 +58,8 @@ In perl 5.38 (2023) smart match is deprecated. You can no longer silence the
 warning with "use experimental 'smartmatch'" and must replace the use of smart
 match with something else.
 
-Perl 5.40 (2024) finally removes smart match, resulting in a syntax error if you
-still use it.
+Perl 5.42 (planned 2025) will finally remove smart match, resulting in a syntax
+error if you still use it.
 
 
 **Modules**
