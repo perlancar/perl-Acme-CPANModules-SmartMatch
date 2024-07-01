@@ -64,26 +64,41 @@ still use it.
 **Modules**
 
 However, if you still miss smart matching, some modules have been written to
-give you somewhat similar feature.
+give you the same/similar feature.
 
 <pm:match::smart> (by TOBYINK, first released 2013, pure-perl) gives you a
 similar behaviour to perl's own `~~`. It can be used as the `|M|` operator or as
 the `match()` function.
 
+<pm:Switch::Back> (by DCONWAY, first released in June 2024, pure-perl). Written
+by one of the designers of Perl 6, Switch::Back offers roughly the same feature
+set as the old `switch` and smartmatching. Although there's no longer `~~`, just
+the `smartmatch()` function. So basically what <pm:match::smart> offers, but 11
+years later.
+
 <pm:match::simple> (by TOBYINK which is also the author of `match::smart`, first
 released in 2013, in the same distribution as `match::smart`, available in XS as
-well as pure-perl) offers a simplified version of smart matching. Still it has 8
-kinds of behaviors depending on the /right/ hand side.
+well as pure-perl) offers a simplified version of smart matching. It has 8 kinds
+of behaviors depending only on the /right/ hand side.
 
 Also see <pm:match::simple::sugar> which gives you `when`, `then`, and `numeric`
 for use in a `for()` statement as a switch/use alternative.
 
-<pm:Switch::Right> (by DCONWAY, first released in June 2024, pure-perl). Written
-by one of the designers of Perl 6, Switch::Right offers a simplified (or
-reimagined) `switch` and smartmatching by simplifying the rules from 23 to just
-6, though the rules still depend on a mix of left and right operands. Since the
-module is new and has no reverse dependencies on CPAN yet, we still need to wait
-and see if the ruleset is a good and practical compromise.
+<pm:Switch::Right> (by DCONWAY, first released in June 2024, pure-perl). Also
+like TOBYINK with his duo of `match::smart` and `match::simple`, DCONWAY offers
+a companion to `Switch::Back`, a simplified/reimagined version of `switch` and
+smartmatching by simplifying the rules from 23 to just 6. The rules still depend
+on a mix of left and right operands.
+
+
+**Personal take**
+
+I personally haven't used `switch` all that much in Perl, though I used to use
+quite a bit of smartmatching in the 2010s, mostly the `SCALAR ~~
+ARRAY-OF-SCALARS` variant. I won't use `match::smart` or `Switch::Back` in any
+practical code, but which between `match::simple` and `Switch::Right` are the
+best compromise? I guess we'll have to see. In the mean time, see my benchmark
+in <pm:Bencher::ScenarioBundle::SmartMatch>.
 
 
 **Other modules**
